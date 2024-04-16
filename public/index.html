@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Job</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <form id="jobForm" class="job-form">
+            <div class="left-column">
+                <div class="client-details">
+                    <h2>Client Details</h2>
+                    <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                    <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone" required>
+                    <input type="email" id="email" name="email" placeholder="Email">
+                </div>
+                
+                <div class="service-location">
+                    <h2>Service Location</h2>
+                    <input type="text" id="address" name="address" placeholder="Address" required>
+                    <input type="text" id="city" name="city" placeholder="City" required>
+                    <input type="text" id="zip" name="zip" placeholder="Zip Code" required>
+                    <select id="state" name="state" required>
+                        <option value="">State</option>
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="FL">Florida</option>
+                    </select>
+                    <input type="text" id="country" name="country" placeholder="Country" required>
+                </div>
+            </div>
+            
+            <div class="right-column">
+                <div class="job-type">
+                    <h2>Job Type</h2>
+                    <select id="jobType" name="jobType" required>
+                        <option value="">Select Job Type</option>
+                        <option value="consultation">Consultation</option>
+                        <option value="repair">Repair</option>
+                        <option value="maintenance">Maintenance</option>
+                        <option value="installation">Installation</option>
+                        <option value="inspection">Inspection</option>
+                        <option value="custom_project">Custom Project</option>
+                    </select>
+                    <textarea id="jobDescription" name="jobDescription" placeholder="Describe the job here..." rows="4"></textarea>
+                </div>            
+
+                <div class="scheduled">
+                    <h2>Scheduled</h2>
+                    <input type="date" id="scheduledDate" name="scheduledDate" placeholder="Date" required>
+                    <input type="time" id="startTime" name="startTime" placeholder="Start Time" required>
+                    <input type="time" id="endTime" name="endTime" placeholder="End Time" required>
+                    <select id="technician" name="technician" required>
+                        <option value="">Select Technician</option>
+                        <option value="tech1">Technician 1</option>
+                        <option value="tech2">Technician 2</option>
+                        <option value="tech3">Technician 3</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="submit-button">Create Job</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
